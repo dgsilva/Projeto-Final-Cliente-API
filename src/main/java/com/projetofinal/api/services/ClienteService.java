@@ -21,6 +21,7 @@ public class ClienteService {
 
 	public ResponseEntity<ClienteResponse> create(ClienteDto dto) {
 		ClienteResponse response = new ClienteResponse();
+		
 		if (clienteRepository.findByEmail(dto.getEmail()).isPresent()) {
 			throw new IllegalArgumentException("O email Já existe, tente outro");
 		}

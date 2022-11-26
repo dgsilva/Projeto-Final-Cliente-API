@@ -1,5 +1,7 @@
 package com.projetofinal.api.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +21,7 @@ public class ClienteController {
 	private ClienteService clienteService;
 	
 	@PostMapping()
-	public ResponseEntity<ClienteResponse> save(@RequestBody ClienteDto dto) {
+	public ResponseEntity<ClienteResponse> save(@Valid @RequestBody ClienteDto dto) {
 	    return clienteService.create(dto);
 	}
 }
