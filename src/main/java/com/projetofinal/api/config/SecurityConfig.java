@@ -23,7 +23,7 @@ public class SecurityConfig {
 UsernamePasswordAuthenticationFilter.class)
 				.authorizeRequests()
 				.antMatchers(HttpMethod.POST, "/api/v1/auth").permitAll()
-				.antMatchers(HttpMethod.POST, "/api/v1/cliente").permitAll()
+				.antMatchers(HttpMethod.POST, "/api/cliente").permitAll()
 				.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 				.anyRequest()
 				.authenticated();

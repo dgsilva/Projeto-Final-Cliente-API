@@ -17,5 +17,5 @@ public interface ClienteRepository extends MongoRepository<Cliente, String> {
 	Optional <Cliente> findByTelefone(String telefone);
 	
 	@Query("{email: ?0, senha: ?1}")
-	Optional<Cliente> findyByEmailAndSenha(String email, String senha);
+	Optional<Cliente> findByEmailAndSenha(String email, String senha);
 }
