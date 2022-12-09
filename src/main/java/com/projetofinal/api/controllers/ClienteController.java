@@ -19,7 +19,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 @Api("Cliente")
 @RestController
-@RequestMapping("/api/cliente")
+@RequestMapping("/v1/clientes")
 public class ClienteController {
 
 	@Autowired
