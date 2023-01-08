@@ -18,11 +18,12 @@ import io.swagger.annotations.ApiOperation;
 
 @Api("Autenticação")
 @RestController
-@RequestMapping("/api/v1/auth")
+@RequestMapping("/v1/login")
 public class AuthController {
 
 	@Autowired
 	private ClienteService clienteService;
+	
 	@ApiOperation("Servico para autenticação do cliente")
 	@PostMapping
 	public ResponseEntity<AuthResponseDto> logar(@Valid @RequestBody AuthRequestDto dto){

@@ -22,8 +22,8 @@ public class SecurityConfig {
 		http.csrf().disable().addFilterAfter(new TokenAuthenticationFilter(), 
 UsernamePasswordAuthenticationFilter.class)
 				.authorizeRequests()
-				.antMatchers(HttpMethod.POST, "/api/v1/auth").permitAll()
-				.antMatchers(HttpMethod.POST, "/api/cliente").permitAll()
+				.antMatchers(HttpMethod.POST, "/v1/login").permitAll()
+				.antMatchers(HttpMethod.POST, "/v1/clientes").permitAll()
 				.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 				.anyRequest()
 				.authenticated();
